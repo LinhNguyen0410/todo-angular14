@@ -1,0 +1,22 @@
+<button class="btn" (click)="handleLogout()">Logout</button>
+<button class="btn" (click)="handleBack()">Home</button>
+<div class="wrapper-todo">
+  <h4 class="todo-title">Todo List</h4>
+  <app-search-input
+    [mode]="mode"
+    (addNewTodo)="handleAddNewTodo($event)"
+    [valueEditTodo]="valueWillEdit"
+  ></app-search-input>
+  <app-filter-todo
+    [todoFilterStatus]="todoFilterStatus"
+    [filterParams]="statusParams"
+    (filteredValue)="handleFilterTodo($event)"
+  ></app-filter-todo>
+  <app-todo-item
+    [todoList]="todos"
+    (markStatus)="handleToggleStatus($event)"
+    (deleteTodo)="handleDeleteTodo($event)"
+    (editTodo)="handleEditTodo($event)"
+  >
+  </app-todo-item>
+</div>

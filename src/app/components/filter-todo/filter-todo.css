@@ -1,0 +1,11 @@
+.wrap-filter {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.wrap-checkbox input {
+  transform: scale(1.5);
+  margin-left: 10px;
+  cursor: pointer;
+}

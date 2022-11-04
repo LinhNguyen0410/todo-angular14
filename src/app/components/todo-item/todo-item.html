@@ -1,0 +1,18 @@
+<div
+  class="todo {{ todo.completed ? 'completed' : '' }}"
+  *ngFor="let todo of todoList"
+  #todoItem
+>
+  <div class="content">{{ todo.content }}</div>
+  <div class="action">
+    <div class="btn-completed" (click)="emitIDToggleStatus(todo)">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <div class="btn-delete" (click)="emitIDDeleteTodo(todo.id)">
+      <i class="fa-sharp fa-solid fa-xmark"></i>
+    </div>
+    <div class="btn-edit" (click)="emitIDEditTodo(todo)">
+      <i class="fa-solid fa-pen-to-square"></i>
+    </div>
+  </div>
+</div>

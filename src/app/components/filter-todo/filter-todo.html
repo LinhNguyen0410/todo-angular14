@@ -1,0 +1,14 @@
+<div class="wrap-filter">
+  <div class="wrap-checkbox" *ngFor="let status of todoFilterStatus">
+    <label [for]="'status'">{{ status.toUpperCase() }}</label>
+    <input
+      type="radio"
+      name="status"
+      class="todo-status"
+      [id]="status"
+      [value]="status"
+      [checked]="status === filterParams || status === 'all'"
+      (change)="onFilterChange($event)"
+    />
+  </div>
+</div>

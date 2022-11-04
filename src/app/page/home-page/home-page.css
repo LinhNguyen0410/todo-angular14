@@ -1,0 +1,18 @@
+.list-project {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  gap: 30px;
+  cursor: pointer;
+}
+.item {
+  text-align: center;
+  border: 3px solid green;
+  padding: 70px;
+}
+.item:hover {
+  background-color: rgb(156, 150, 150);
+}
+span {
+  font-size: 30px;
+}

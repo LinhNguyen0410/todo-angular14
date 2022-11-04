@@ -1,0 +1,32 @@
+<button class="btn" (click)="handleBack()">Home</button>
+
+<div class="form">
+  <form #frm1="ngForm">
+    <p>
+      <label>Username</label>
+      <input
+        name="username"
+        [(ngModel)]="username"
+        class="form-control"
+        type="text"
+        required
+        minlength="6"
+        #validate="ngModel"
+      />
+    </p>
+    <p *ngIf="username" class="msg-invalid">
+      {{ validate.invalid ? "Username must be at least 6 characters." : "" }}
+    </p>
+    <p>
+      <label>Password</label>
+      <input
+        name="password"
+        [(ngModel)]="password"
+        class="form-control"
+        type="password"
+      />
+    </p>
+    <button (click)="handLeLoginTodo()" type="submit">Đăng nhập</button>
+  </form>
+  <span class="msg-error">{{ msgErr }}</span>
+</div>

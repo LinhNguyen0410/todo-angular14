@@ -1,0 +1,49 @@
+.title {
+  font-size: 30px;
+  text-align: center;
+}
+.todo {
+  width: 550px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 25px;
+  background-color: rgba(254, 254, 254, 0.655);
+  padding: 20px 60px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid;
+  animation: addTodo 0.6s;
+}
+.completed {
+  text-decoration: line-through;
+  background-color: rgb(192, 96, 102);
+}
+
+.content {
+  line-break: anywhere;
+}
+
+.action {
+  display: flex;
+  gap: 25px;
+  margin-left: auto;
+}
+.btn-completed {
+  color: rgb(44, 88, 59);
+}
+.btn-delete {
+  color: red;
+}
+.animate-delete {
+  animation: deleteTodo 0.6s;
+}
+@keyframes addTodo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
